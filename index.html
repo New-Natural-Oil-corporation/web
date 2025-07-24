@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Natural Oil Corporation - Sustainable Bio Diesel Solutions</title>
+    <style>
+        /* === GLOBAL RESET === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: hsl(0, 0%, 15%);
+            --secondary-color: hsl(0, 0%, 25%);
+            --text-color: hsl(0, 0%, 95%);
+            --text-color-muted: hsl(0, 0%, 80%);
+            --accent-color: hsl(83, 100%, 50%);
+            --form-background: hsl(0, 0%, 25%);
+            --success-color: hsl(120, 100%, 50%);
+            --warning-color: hsl(45, 100%, 50%);
+            --gradient: linear-gradient(135deg, var(--accent-color), hsl(83, 80%, 40%));
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            background-color: var(--primary-color);
+            min-height: 100vh;
+            width: 100%;
+            padding: 2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container {
+            height: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4vh;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .heading {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .passage {
+            margin: 2rem 0;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-size: 3.6rem;
+            font-weight: bolder;
+            text-shadow: 0 0 20px rgba(131, 255, 0, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(131, 255, 0, 0.3); }
+            to { text-shadow: 0 0 30px rgba(131, 255, 0, 0.8); }
+        }
+
+        .title {
+            color: var(--text-color);
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle-part {
+            color: var(--text-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background: var(--gradient);
+            border: none;
+            border-radius: 16px;
+            height: 72px;
+            width: 200px;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(131, 255, 0, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(131, 255, 0, 0.5);
+        }
+
+        .text {
+            font-size: 1.4rem;
+            color: var(--text-color-muted);
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .text-small {
+            font-size: 1.1rem;
+            color: var(--text-color-muted);
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .text-small-center {
+            font-size: 1.1rem;
+            color: var(--text-color-muted);
+            text-align:center;
+            width: 80%;
+        }
+
+        .image {
+            height: 40vh;
+            width: 40vh;
+            margin: 2rem;
+            border-radius: 16px;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(131, 255, 0, 0.3);
+        }
+
+        .side-to-side {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 4rem;
+        }
+
+        .form {
+            height: 80vh;
+            background-color: var(--form-background);
+            border-radius: 16px;
+            aspect-ratio: 6 / 8;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .card {
+            height: 35vh;
+            background: var(--gradient);
+            border-radius: 16px;
+            aspect-ratio: 1 / 1;
+            margin: 2rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 8px 25px rgba(131, 255, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(131, 255, 0, 0.5);
+        }
+
+        .profile-card {
+            height: 40vh;
+            background: var(--primary-color);
+            border-radius: 16px;
+            border:2px solid var(--accent-color) ;
+            aspect-ratio: 1 / 1;
+            margin: 2rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0.8rem;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-card-pic{
+            height: 20vh;
+            width: 20vh;
+            background-color: var(--text-color-muted);
+            aspect-ratio: 1 / 1;
+            border-color: var(--text-color);
+            border-radius: 88px;
+        }
+
+        .profile-image{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border: 8px solid var(--accent-color);
+            border-radius: 88px;
+        }
+
+        .horizontal-card {
+            height: auto;
+            min-height: 25vh;
+            aspect-ratio: 3 / 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 16px;
+            color: var(--text-color-muted);
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            gap: 1rem;
+            text-align: left;
+            border: 2px solid var(--secondary-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .horizontal-card:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 25px rgba(131, 255, 0, 0.3);
+        }
+
+        .icon {
+            width: 2rem;
+            height: 2rem;
+            fill: var(--accent-color);
+        }
+
+        .plate {
+            height: 90%;
+            width: 90%;
+            border-radius: 16px;
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+            box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* New Sections */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><rect fill="%23262626" width="1000" height="1000"/><circle fill="%2383ff00" cx="200" cy="200" r="3" opacity="0.3"/><circle fill="%2383ff00" cx="800" cy="300" r="2" opacity="0.4"/><circle fill="%2383ff00" cx="400" cy="700" r="4" opacity="0.2"/></svg>');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .stats-section {
+            background-color: var(--secondary-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .stat-card {
+            background: var(--gradient);
+            color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(131, 255, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .service-card {
+            background-color: var(--secondary-color);
+            border: 2px solid var(--accent-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(131, 255, 0, 0.3);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--secondary-color);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1rem 0;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-color-muted);
+            margin-bottom: 1rem;
+        }
+
+        .author {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .cta-section {
+            background: var(--gradient);
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .side-to-side {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            
+            .horizontal-card {
+                width: 100%;
+                max-width: 350px;
+                aspect-ratio: auto;
+            }
+            
+            .image {
+                height: 300px;
+                width: 300px;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .highlight {
+                font-size: 2.5rem;
+            }
+            
+            .form {
+                width: 100%;
+                height: 60vh;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(131, 255, 0, 0.3);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-description {
+            color: var(--text-color-muted);
+            font-size: 0.9rem;
+        }
+
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: var(--secondary-color);
+            border: 2px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gradient);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--text-color-muted);
+            padding: 3rem 2rem 1rem;
+            margin-top: 0;
+            border-top: 3px solid var(--accent-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--text-color-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-icon:hover {
+            background: var(--gradient);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--secondary-color);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-color-muted);
+        }
+
+        .footer-logo {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Modal Styles for Gallery */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: var(--primary-color);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+        }
+
+        .modal-info {
+            padding: 2rem;
+            color: var(--text-color);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: var(--accent-color);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            background-color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="section hero-section">
+        <div class="container fade-in-up">
+            <div>
+                <h1 class="title">New <span class="highlight">Natural</span> Oil Corporation</h1>
+                <h3 class="subtitle-part">A Unit of RSN Natural Oil and Petroleum PVLTD</h3>
+                <h3 class="subtitle">Sustainable Bio Diesel Solutions for Tomorrow</h3>
+                <p class="text" style="text-align: center; margin: 2rem 0;">Leading the future of renewable energy with eco-friendly bio diesel production and distribution</p>
+            </div>
+            <button type="button" class="button" onclick="scrollToSection('about')">Get Started!</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container side-to-side">
+            <div>
+                <h1 class="title heading">What does our brand do?</h1>
+                <p class="text passage">The Natural Oil Corporation is a pioneering company in sustainable energy solutions. We specialize in setting up bio diesel pumps and renewable fuel stations. All you need is a roadside land/plot, and we handle everything - from construction to oil supply and ongoing maintenance. Our bio diesel is produced from natural, renewable sources, making it an eco-friendly alternative to traditional fossil fuels.</p>
+                <div style="margin-top: 2rem;">
+                    <button type="button" onclick="scrollToSection('services')">Learn More</button>
+                </div>
+            </div>
+            <img class="image" height="400" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bio diesel construction site">
+        </div>
+    </section>
+
+    <!-- Stats Section 
+    <section class="section stats-section">
+        <div class="container">
+            <h1 class="title heading">Our Impact</h1>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span>Pumps Installed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50M+</span>
+                    <span>Liters Distributed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">75%</span>
+                    <span>CO2 Reduction</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span>Support Available</span>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <h1 class="title heading">Our Services</h1>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3 class="subtitle">Pump Construction</h3>
+                    <p class="text-small">Complete construction and installation of bio diesel pumps with modern infrastructure and safety standards.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛢️</div>
+                    <h3 class="subtitle">Bio Diesel Supply</h3>
+                    <p class="text-small">Consistent supply of high-quality bio diesel produced from renewable sources with guaranteed purity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="subtitle">Maintenance & Support</h3>
+                    <p class="text-small">24/7 technical support and regular maintenance to ensure optimal performance of your fuel station.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥🔌 </div>
+                    <h3 class="subtitle">CNG & EV Charging Stations</h3>
+                    <p class="text-small">We also provide the construction of charging stations of EVs and CNG pumps too</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="plate side-to-side container">
+            <div class="card">
+                <div class="card-icon">🌱</div>
+                <div>Eco-Friendly<br>100% Renewable</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <div>High Performance<br>Superior Quality</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <div>Cost Effective<br>Better ROI</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <div>Safe & Reliable<br>Certified Standards</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title heading">What Our Partners Say</h1>
+            <div style="max-width: 800px; width: 100%;">
+                <div class="testimonial-card">
+                    <p class="quote">"The Natural Oil Corporation transformed our business. Their bio diesel pumps are efficient, eco-friendly, and profitable. The support team is exceptional!"</p>
+                    <p class="author">- Rajesh Kumar, Station Owner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Outstanding service from start to finish. The construction was completed on time, and the bio diesel quality exceeds expectations."</p>
+                    <p class="author">- Priya Sharma, Entrepreneur</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Switching to bio diesel has reduced our carbon footprint significantly while maintaining excellent fuel performance."</p>
+                    <p class="author">- Mumbai Transport Co.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <h1 class="title">Ready to Go Green?</h1>
+            <p class="subtitle">Join the sustainable energy revolution today</p>
+            <button type="button" class="cta-button" onclick="scrollToSection('contact')">Start Your Project</button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <h1 class="title heading">Our Work Gallery</h1>
+            <p class="subtitle">See our completed projects and installations</p>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="construction">Construction</button>
+                <button class="filter-btn" data-filter="pumps">Pump Stations</button>
+                <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+                <button class="filter-btn" data-filter="facilities">Facilities</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="construction" data-title="Bio Diesel Plant Construction" data-description="Complete construction of our bio diesel production facility in Maharashtra with advanced processing equipment.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bio diesel plant construction">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Bio Diesel Plant Construction</div>
+                        <div class="gallery-description">Advanced production facility in Maharashtra</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pumps" data-title="Modern Fuel Station" data-description="State-of-the-art bio diesel pump station with digital displays and automated systems for efficient fuel dispensing.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern fuel station">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Modern Fuel Station</div>
+                        <div class="gallery-description">Digital displays and automated systems</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="construction" data-title="Site Preparation" data-description="Ground preparation and foundation work for a new bio diesel station in Punjab, ensuring proper drainage and safety measures.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction site preparation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Site Preparation</div>
+                        <div class="gallery-description">Foundation work in Punjab</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pumps" data-title="Multi-Pump Installation" data-description="Installation of multiple bio diesel dispensers at a highway fuel station with capacity for heavy vehicles and passenger cars.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Multiple pump installation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Multi-Pump Installation</div>
+                        <div class="gallery-description">Highway station with multiple dispensers</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facilities" data-title="Storage Tank Farm" data-description="Large capacity storage tanks for bio diesel with advanced safety systems and environmental protection measures.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Storage tank farm">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Storage Tank Farm</div>
+                        <div class="gallery-description">Advanced safety and environmental systems</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="maintenance" data-title="Pump Maintenance" data-description="Regular maintenance and inspection of bio diesel pumps to ensure optimal performance and safety compliance.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pump maintenance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Pump Maintenance</div>
+                        <div class="gallery-description">Regular inspection and servicing</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="construction" data-title="Canopy Installation" data-description="Installation of modern weather-protective canopies over fuel dispensers with integrated lighting and signage.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Canopy installation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Canopy Installation</div>
+                        <div class="gallery-description">Weather protection with integrated lighting</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facilities" data-title="Quality Testing Lab" data-description="In-house laboratory for bio diesel quality testing and certification to ensure all products meet international standards.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quality testing lab">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Quality Testing Lab</div>
+                        <div class="gallery-description">Ensuring international standards</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pumps" data-title="Smart Fuel Dispenser" data-description="Latest generation smart dispensers with digital payment systems, real-time monitoring, and eco-friendly operation indicators.">
+                    <img class="gallery-image" src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smart fuel dispenser">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Smart Fuel Dispenser</div>
+                        <div class="gallery-description">Digital payments and real-time monitoring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Team-->
+    <section class="section">
+        <div class="plate side-to-side">
+            <div class="profile-card">
+                <div class="profile-card-pic" ><img class="profile-image" src="img/Sandeep_Dubey.jpeg" alt="" srcset=""></div>
+                <h3 class="subtitle">Sandeep Dubey</h3>
+                <p class="text-small-center">State head West Bengal</p>
+            </div>
+            <div class="profile-card">
+                <div class="profile-card-pic" ><img class="profile-image" src="img/Nitish Kumar.jpeg" alt="" srcset=""></div>
+                <h3 class="subtitle">Nitish Kumar</h3>
+                <p class="text-small-center">Director/Finance Manager</p>
+            </div>
+            <div class="profile-card">
+                <div class="profile-card-pic" ><img class="profile-image" src="img/Randhir Kumar Mandal.jpeg" alt="" srcset=""></div>
+                <h3 class="subtitle">Randhir Kumar Mandal</h3>
+                <p class="text-small-center">Managing Director</p>
+            </div>
+            <div class="profile-card">
+                <div class="profile-card-pic" ><img class="profile-image" src="img/Chandan Kumar.jpeg" alt="" srcset=""></div>
+                <h3 class="subtitle">Chandan Kumar</h3>
+                <p class="text-small-center">State Head Bihar/Jharkhand</p>
+            </div>
+            <div class="profile-card">
+                <div class="profile-card-pic" ><img class="profile-image" src="img/Mangal Yadav.jpeg" alt="" srcset=""></div>
+                <h3 class="subtitle">Mangal Yadav</h3>
+                <p class="text-small-center">Public Relations Officer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h1 class="title heading">Contact Us</h1>
+            <div class="side-to-side">
+                <iframe frameborder="0" marginheight="0" marginwidth="0" class="form" 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSekfWrricJr-9DfVLu9G3Zvc0FcJwsz0YB3ey83ACnAbmQYZg/viewform?embedded=true">
+                    Loading…
+                </iframe>
+                <div class="container">
+                    <div class="horizontal-card">
+                        <div>
+                            <div class="title">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                                Phone
+                            </div>
+                            <p class="text-small">+91 98765 43210<br>Mon-Fri 9AM-6PM IST</p>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div>
+                            <div class="title">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                                Email
+                            </div>
+                            <p class="text-small">info@naturaloil.com<br>We'll respond within 4 hours</p>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div>
+                            <div class="title">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                Address
+                            </div>
+                            <p class="text-small">Green Energy Park<br>Sector 45, Gurgaon<br>Haryana 122003</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Natural Oil Corporation</h3>
+                <p>Leading the sustainable energy revolution with eco-friendly bio diesel solutions. We're committed to providing clean, renewable fuel alternatives that benefit both business and environment.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">📺</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Bio Diesel Production</a></li>
+                    <li><a href="#services">Pump Station Construction</a></li>
+                    <li><a href="#services">Equipment Installation</a></li>
+                    <li><a href="#services">Maintenance & Support</a></li>
+                    <li><a href="#services">Quality Testing</a></li>
+                    <li><a href="#services">Business Consultation</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#gallery">Project Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Environmental Policy</a></li>
+                    <li><a href="#">Safety Standards</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>📍 Green Energy Park<br>Sector 45, Gurgaon<br>Haryana 122003, India</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@naturaloil.com</p>
+                <p>🌐 www.naturaloil.com</p>
+                <p>⏰ Mon-Fri: 9AM-6PM IST<br>Sat: 9AM-2PM IST</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 <span class="footer-logo">The Natural Oil Corporation</span>. All rights reserved. | Powered by Sustainable Energy Solutions</p>
+            <p>ISO 9001:2015 Certified | Bureau of Indian Standards Approved | Environmental Compliance Certified</p>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" class="modal-image">
+            <div class="modal-info">
+                <h3 id="modalTitle" class="title"></h3>
+                <p id="modalDescription" class="text-small"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections for animations
+        document.querySelectorAll('.card, .service-card, .stat-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                const numericPart = target.match(/\d+/)[0];
+                const suffix = target.replace(numericPart, '');
+                
+                let current = 0;
+                const increment = numericPart / 50;
+                
+                const updateCounter = () => {
+                    if (current < numericPart) {
+                        current += increment;
+                        counter.textContent = Math.floor(current) + suffix;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
